@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(93, 0, 180);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.word {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50px;
+    padding-inline-start: 0px;
+}
+
+.word li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    color: white;
+}
+
+.WrongLetters {
+    margin: 0 auto;
+    font-size: 30px;
+    height: 100px;
+    width: 80%;
+    color: white;
+    margin-top: 100px;
+}
+
+.wrongLettersUl {
+    margin-left: -40px;
+}
+
+.WrongLetters li {
+    list-style-type: none;
+    padding: 5px;
+    display: inline;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+
+.alert {
+    width: auto;
+    height: auto;
+    position: fixed;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgb(67, 0, 129);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    transition: 0.3s ease-in-out;
+}
+
+.gameOver {
+    width: 600px;
+    height: 45px;
+    color: white;
+    text-align: center;
+    background-color: rgb(247, 96, 96);
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gameWon {
+    width: 400px;
+    height: 45px;
+    color: black;
+    text-align: center;
+    background-color: rgb(168, 255, 160);
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.restart {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    color: black;
+    text-align: center;
+    background-color: rgb(168, 255, 160);
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gameEnd-container {
+    height: auto;
+    width: 449px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.end1,
+.end2 {
+    display: none;
+}
