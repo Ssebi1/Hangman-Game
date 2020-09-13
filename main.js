@@ -1,9 +1,17 @@
 const DataController = (function () {
     const words = ['test', 'english', 'hangman', 'game'];
     return {
-        getRandomWord: function () {
-            var word = document.querySelector('.hidden').textContent;
-            return word;
+        getRandomWord: async function () {
+            const resp = await fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true&frequencyMin=4&lettersMax=15", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+                    "x-rapidapi-key": "ea881fe322msh53ec3a947b38961p147352jsn4a744b3d32ac"
+                }
+            });
+
+            let data = await resp.json();
+            return data.word;
         },
         checkIfIsLetter: function (letter) {
             if (
@@ -119,13 +127,14 @@ var controller = (function (DataController, UIController) {
     });
 
     return {
-        init() {
+        init: async function () {
             gameStatus = 1;
             UIController.removeWordLine();
             document.querySelector('.end1').style.display = 'none';
             document.querySelector('.end2').style.display = 'none';
             document.querySelector('.wrongLettersUl').innerHTML = '';
-            word = DataController.getRandomWord().toUpperCase(); //Getting Random Word
+            word = await DataController.getRandomWord(); //Getting Random Word
+            word = word.toUpperCase();
             array = UIController.splitWord(word); //Putting word's letters in array
             usedLettersArray = [];
             wrongLetters = 0;

@@ -29,14 +29,14 @@
 
     <div class="gameEnd-container end1" style="width:650px">
         <div class="gameOver">Game Over! The word was <span class="correctWord">CorWord</span></div>
-        <div class="restart" style="background-color: rgb(247, 96, 96);color:white;"
-            onclick="document.location.reload(true)"><i class="fa fa-refresh" aria-hidden="true"></i></div>
+        <div class="restart" style="background-color: rgb(247, 96, 96);color:white;" onclick="controller.init()"><i
+                class="fa fa-refresh" aria-hidden="true"></i></div>
     </div>
 
 
     <div class="gameEnd-container end2">
         <div class="gameWon">Nice! You won the game</div>
-        <div class="restart" onclick="document.location.reload(true)"><i class="fa fa-refresh" aria-hidden="true"></i>
+        <div class="restart" onclick="controller.init()"><i class="fa fa-refresh" aria-hidden="true"></i>
         </div>
     </div>
 
