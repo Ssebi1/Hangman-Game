@@ -2,8 +2,8 @@ const DataController = (function () {
     const words = ['test', 'english', 'hangman', 'game'];
     return {
         getRandomWord: function () {
-            var randNumber = Math.floor(Math.random() * 4);
-            return words[randNumber];
+            var word = document.querySelector('.hidden').textContent;
+            return word;
         },
         checkIfIsLetter: function (letter) {
             if (
